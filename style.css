@@ -1,4 +1,4 @@
-/* Couples Wrapped public pages. No scripts from elsewhere, no fonts from elsewhere, no tracking. */
+/* Couples Recap public pages. No scripts from elsewhere, no fonts from elsewhere, no tracking. */
 :root {
   --night: #1a0e12;
   --plum: #2a0f18;
@@ -10,43 +10,173 @@
   --rose: #e86a6a;
   --line: rgba(251, 241, 230, 0.14);
 }
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
 body {
   margin: 0;
   min-height: 100vh;
   background: linear-gradient(180deg, var(--plum), var(--night) 42%, #150a0e);
   background-attachment: fixed;
   color: var(--cream);
-  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font:
+    17px/1.6 -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
-main { max-width: 680px; margin: 0 auto; padding: 56px 22px 96px; }
-.brand { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--apricot); text-decoration: none; }
-h1, h2 { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 700; letter-spacing: -0.01em; }
-h1 { font-size: clamp(34px, 7vw, 46px); line-height: 1.12; margin: 18px 0 10px; }
-h2 { font-size: 24px; line-height: 1.25; margin: 44px 0 8px; }
-h3 { font-size: 17px; margin: 26px 0 4px; }
-p, li { color: var(--muted); }
-strong { color: var(--cream); font-weight: 600; }
-a { color: var(--apricot); }
-ul { padding-left: 20px; }
-li { margin: 6px 0; }
-.lede { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-style: italic; font-size: 20px; color: var(--muted); }
-.updated { color: var(--faint); font-size: 14px; }
-.card { border: 1px solid var(--line); background: rgba(251, 241, 230, 0.05); border-radius: 20px; padding: 18px 20px; margin: 22px 0; }
-.card ul { margin: 0; }
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 56px 22px 96px;
+}
+.brand {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--apricot);
+  text-decoration: none;
+}
+h1,
+h2 {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+h1 {
+  font-size: clamp(34px, 7vw, 46px);
+  line-height: 1.12;
+  margin: 18px 0 10px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 44px 0 8px;
+}
+h3 {
+  font-size: 17px;
+  margin: 26px 0 4px;
+}
+p,
+li {
+  color: var(--muted);
+}
+strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+a {
+  color: var(--apricot);
+}
+ul {
+  padding-left: 20px;
+}
+li {
+  margin: 6px 0;
+}
+.lede {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+}
+.updated {
+  color: var(--faint);
+  font-size: 14px;
+}
+.card {
+  border: 1px solid var(--line);
+  background: rgba(251, 241, 230, 0.05);
+  border-radius: 20px;
+  padding: 18px 20px;
+  margin: 22px 0;
+}
+.card ul {
+  margin: 0;
+}
 .button {
-  display: block; text-align: center; text-decoration: none; font-weight: 700; color: #2a1218;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: #2a1218;
   background: linear-gradient(135deg, #e9c27d, var(--apricot) 55%, var(--rose));
-  border-radius: 999px; padding: 17px 24px; margin: 18px 0 10px;
+  border-radius: 999px;
+  padding: 17px 24px;
+  margin: 18px 0 10px;
 }
-.code { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 700; font-size: 42px; letter-spacing: 0.08em; color: var(--apricot); text-align: center; margin: 6px 0; }
-.label { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); text-align: center; }
-.prints { display: flex; justify-content: center; height: 150px; margin: 34px 0 6px; }
-.print { width: 96px; height: 124px; background: var(--cream); padding: 6px 6px 18px; border-radius: 3px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4); margin: 0 -10px; }
-.print i { display: block; width: 100%; height: 100%; border-radius: 1px; }
-.print:nth-child(1) { transform: rotate(-9deg); } .print:nth-child(1) i { background: linear-gradient(#f08a80, #b8455a); }
-.print:nth-child(2) { transform: rotate(3deg) translateY(-6px); z-index: 1; } .print:nth-child(2) i { background: linear-gradient(#f8ce9a, #ee9463); }
-.print:nth-child(3) { transform: rotate(9deg); } .print:nth-child(3) i { background: linear-gradient(#b98a94, #7a4b5a); }
-footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14px; color: var(--faint); }
-footer a { color: var(--muted); margin-right: 14px; }
+.code {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: 0.08em;
+  color: var(--apricot);
+  text-align: center;
+  margin: 6px 0;
+}
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+  text-align: center;
+}
+.prints {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  margin: 34px 0 6px;
+}
+.print {
+  width: 96px;
+  height: 124px;
+  background: var(--cream);
+  padding: 6px 6px 18px;
+  border-radius: 3px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  margin: 0 -10px;
+}
+.print i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 1px;
+}
+.print:nth-child(1) {
+  transform: rotate(-9deg);
+}
+.print:nth-child(1) i {
+  background: linear-gradient(#f08a80, #b8455a);
+}
+.print:nth-child(2) {
+  transform: rotate(3deg) translateY(-6px);
+  z-index: 1;
+}
+.print:nth-child(2) i {
+  background: linear-gradient(#f8ce9a, #ee9463);
+}
+.print:nth-child(3) {
+  transform: rotate(9deg);
+}
+.print:nth-child(3) i {
+  background: linear-gradient(#b98a94, #7a4b5a);
+}
+footer {
+  margin-top: 64px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--faint);
+}
+footer a {
+  color: var(--muted);
+  margin-right: 14px;
+}

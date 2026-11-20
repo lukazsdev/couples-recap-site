@@ -1,51 +1,63 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>You're invited · Couples Wrapped</title>
-<meta name="robots" content="noindex">
-<meta name="description" content="Your partner found your photos. Add yours to see the whole story.">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<main>
-  <a class="brand" href="../">Couples Wrapped</a>
-  <div class="prints" aria-hidden="true"><div class="print"><i></i></div><div class="print"><i></i></div><div class="print"><i></i></div></div>
-  <h1 id="title">Your partner found your photos.</h1>
-  <p class="lede">Add your camera roll to see every photo of you two, and the ones they took of you.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>You're invited · Couples Recap</title>
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Your partner found your photos. Add yours to see the whole story." />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main>
+      <a class="brand" href="../">Couples Recap</a>
+      <div class="prints" aria-hidden="true">
+        <div class="print"><i></i></div>
+        <div class="print"><i></i></div>
+        <div class="print"><i></i></div>
+      </div>
+      <h1 id="title">Your partner found your photos.</h1>
+      <p class="lede">Add your camera roll to see every photo of you two, and the ones they took of you.</p>
 
-  <div class="card" id="invite" hidden>
-    <div class="label">Your invite code</div>
-    <div class="code" id="code"></div>
-    <a class="button" id="open" href="#">Open in Couples Wrapped</a>
-    <p style="text-align:center;margin:0;font-size:14px">The code works once and expires two weeks after it was made.</p>
-  </div>
-  <div class="card" id="missing" hidden>
-    <p style="margin:0">This link is missing its invite code. Ask your partner to send it again, or type the code they gave you into the app.</p>
-  </div>
+      <div class="card" id="invite" hidden>
+        <div class="label">Your invite code</div>
+        <div class="code" id="code"></div>
+        <a class="button" id="open" href="#">Open in Couples Recap</a>
+        <p style="text-align: center; margin: 0; font-size: 14px">
+          The code works once and expires two weeks after it was made.
+        </p>
+      </div>
+      <div class="card" id="missing" hidden>
+        <p style="margin: 0">
+          This link is missing its invite code. Ask your partner to send it again, or type the code they gave
+          you into the app.
+        </p>
+      </div>
 
-  <h2>Don't have the app yet?</h2>
-  <p>Couples Wrapped is coming soon to the App Store for iPhone. Once it is installed, open this link again or enter the code above.</p>
+      <h2>Don't have the app yet?</h2>
+      <p>
+        Couples Recap is coming soon to the App Store for iPhone. Once it is installed, open this link again
+        or enter the code above.
+      </p>
 
-  <footer>
-    <a href="../privacy/">Privacy policy</a><a href="../terms/">Terms of use</a>
-    <p>Velori Labs Ltd</p>
-  </footer>
-</main>
-<script>
-  // The code is only ever read here in the browser: this page sends nothing anywhere.
-  (function () {
-    var raw = new URLSearchParams(location.search).get('code') || location.hash.replace('#', '');
-    var code = (raw || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
-    if (code.length !== 8) {
-      document.getElementById('missing').hidden = false;
-      return;
-    }
-    document.getElementById('code').textContent = code.slice(0, 4) + '-' + code.slice(4);
-    document.getElementById('open').href = 'coupleswrapped://join?code=' + code;
-    document.getElementById('invite').hidden = false;
-  })();
-</script>
-</body>
+      <footer>
+        <a href="../privacy/">Privacy policy</a><a href="../terms/">Terms of use</a>
+        <p>Velori Labs Ltd</p>
+      </footer>
+    </main>
+    <script>
+      // The code is only ever read here in the browser: this page sends nothing anywhere.
+      (function () {
+        var raw = new URLSearchParams(location.search).get('code') || location.hash.replace('#', '');
+        var code = (raw || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+        if (code.length !== 8) {
+          document.getElementById('missing').hidden = false;
+          return;
+        }
+        document.getElementById('code').textContent = code.slice(0, 4) + '-' + code.slice(4);
+        document.getElementById('open').href = 'coupleswrapped://join?code=' + code;
+        document.getElementById('invite').hidden = false;
+      })();
+    </script>
+  </body>
 </html>
