@@ -11,7 +11,7 @@
     <main>
       <a class="brand" href="../">Couples Recap</a>
       <h1>Privacy policy</h1>
-      <p class="updated">Last updated: 20 November 2026</p>
+      <p class="updated">Last updated: 22 November 2026</p>
 
       <p>
         Couples Recap is an iPhone app for couples. It finds the photos of the two of you in your photo
@@ -28,8 +28,8 @@
       <div class="card">
         <ul>
           <li>
-            <strong>Your photos are looked through on your iPhone.</strong> They are not sent to us to be
-            analysed.
+            <strong>Your photos and videos are looked through on your iPhone.</strong> They are not sent to
+            us to be analysed, and videos are never uploaded at all.
           </li>
           <li>
             <strong>Face matching never leaves your device.</strong> We never receive face data, and we could
@@ -43,17 +43,38 @@
             <strong>You can undo it.</strong> Stop sharing and your uploads are deleted. Delete your account
             and everything we hold about you goes with it.
           </li>
-          <li><strong>No ads, no third-party analytics, and we do not sell data.</strong></li>
+          <li>
+            <strong>No ads, and we do not sell data.</strong> The app counts which screens are used so we can
+            improve it. Those counts never include your photos, names or places, and you can switch them off.
+          </li>
         </ul>
       </div>
 
       <h2>What stays on your iPhone</h2>
       <h3>Your photo library</h3>
       <p>
-        With your permission the app reads your photo library to find photos with the two of you in them. It
-        looks at the pictures, when they were taken and where (if the photo has a location). Photos that do
-        not match are ignored: nothing about them is kept. The app never changes or deletes photos in your
-        library. It adds to your library only when you save a recap video.
+        With your permission the app reads your photo library to find photos and videos with the two of you
+        in them. It looks at the pictures (for a video, a few of its frames), when they were taken and where
+        (if they have a location). For the photos that match it also notes, in a word or two, what the
+        picture shows (a beach, a meal, a dog), so that a recap can say what kind of couple your photos make
+        you; those words stay on your iPhone. Photos and videos that do not match are ignored: nothing about
+        them is kept. The app never changes or deletes anything in your library. It adds to your library only when
+        you save a recap video.
+      </p>
+      <p>
+        Videos never leave your iPhone. A recap can play a few seconds of one of your videos, and the moving
+        part of a Live Photo. To do that the app keeps a short copy in a temporary cache on your iPhone,
+        which it clears by itself. They are part of a recap video only when you export one, and that file is
+        yours to share or not.
+      </p>
+      <h3>Camera and microphone</h3>
+      <p>
+        Reaction mode films whoever is watching a recap with the front camera and microphone, so that you
+        get one clip of their face and what they saw. The camera and microphone are used only while you run
+        reaction mode, and the screen says so before filming starts. The recording and the finished clip are
+        made on your iPhone and are not sent to us. The raw recording is deleted as soon as the clip is made,
+        and the clip sits in a temporary cache that the app clears, unless you save or share it yourself. Only
+        film someone who is happy to be filmed.
       </p>
       <h3>Face data</h3>
       <p>
@@ -74,9 +95,9 @@
       </p>
       <h3>Everything else the app keeps on your phone</h3>
       <p>
-        The list of matched photos (which photo, when, where, and who is in it), the names you typed, the day
-        you got together, your recaps, your settings, and your anniversary reminders, which are scheduled by
-        your iPhone and not by a server.
+        The list of matched photos and videos (which one, when, where, and who is in it), the names you
+        typed, the day you got together, your recaps, your settings, and your anniversary reminders, which
+        are scheduled by your iPhone and not by a server.
       </p>
 
       <h2>What is sent to Apple to name places</h2>
@@ -87,7 +108,20 @@
       </p>
 
       <h2>What is sent to us</h2>
-      <p>Nothing is sent to us until you create or join a couple, or subscribe to Premium. From then on:</p>
+      <h3>Usage statistics</h3>
+      <p>
+        From the first time you open it, the app sends anonymous usage events: which screens you reach, which
+        buttons you use, how many photos a scan found (the number only), and whether a share or a purchase
+        happened. Each event also carries your iPhone model, iOS version, app version and language. Events
+        carry a random ID that is not linked to your account, your name or your email. They never include
+        photos, face data, names, place names or coordinates, and we do not work out your location from your
+        internet address.
+      </p>
+      <p>You can switch this off in Settings → Privacy → Help improve the app.</p>
+      <p>
+        Apart from those statistics, nothing is sent to us until you create or join a couple, or subscribe to
+        Premium. From then on:
+      </p>
       <h3>An account</h3>
       <p>
         The app creates an account with a random ID. It has no name or email attached. If you choose "Save
@@ -96,9 +130,10 @@
       </p>
       <h3>Your couple</h3>
       <p>
-        The first name you entered, the day you got together if you gave one, your invite codes, and the
-        number of photos of the two of you your phone found (the number only). Your partner sees your first
-        name and that number.
+        The first name you entered, the day you got together if you gave one, your invite codes, and two
+        numbers: how many photos of the two of you your phone found, and how many photos of your partner it
+        found. They are numbers only, sent whether or not you share any photos. Your partner sees your first
+        name and those two numbers ("Maya has 312 photos of you").
       </p>
       <h3>Photos you choose to share</h3>
       <p>
@@ -113,6 +148,13 @@
       <p>
         You can leave any photo out before or after sharing, and you can stop sharing at any time, which
         deletes your uploads.
+      </p>
+      <h3>Today's photo</h3>
+      <p>
+        If you are paired, the app picks one of your shared photos each day and a question about it. Which
+        photo and which question were picked for the day, and the answer each of you writes, are stored so you
+        can read each other's answers. Your partner sees your answer only once they have answered too. If you
+        are not paired, your answers stay on your phone.
       </p>
       <h3>Recaps</h3>
       <p>
@@ -141,23 +183,31 @@
           <strong>RevenueCat</strong> manages subscriptions and receives your random account ID and purchase
           history from Apple. It is based in the United States.
         </li>
+        <li>
+          <strong>PostHog</strong> stores the anonymous usage statistics described above on our behalf, in
+          data centres in the European Union.
+        </li>
         <li><strong>Apple</strong> provides sign-in, payments, maps and place names as described above.</li>
       </ul>
-      <p>
-        We do not use advertising networks or analytics companies, and we do not sell or rent data to anyone.
-      </p>
+      <p>We do not use advertising networks, and we do not sell or rent data to anyone.</p>
 
       <h2>Why we are allowed to use it</h2>
       <p>
         Under UK and EU data protection law we rely on: your consent for reading your photo library, for face
         matching on your device and for sharing photos with your partner (you can withdraw it at any time in
         the app or in iOS Settings); and the contract between us for running your account, your couple and
-        your subscription. We never receive face data, so we do not process biometric data on our servers.
+        your subscription; and our legitimate interest in understanding how the app is used so we can improve
+        it, for the anonymous usage statistics (you can object by switching them off in Settings). We never
+        receive face data, so we do not process biometric data on our servers.
       </p>
 
       <h2>How long we keep it</h2>
       <ul>
-        <li>Shared photos and couple data: until you stop sharing, leave, or delete your account.</li>
+        <li>
+          Shared photos, couple data and your answers to the daily question: until you stop sharing, leave, or
+          delete your account.
+        </li>
+        <li>Usage statistics: up to one year.</li>
         <li>
           When you delete your account, your account, your membership, your photo records and your uploaded
           photos are deleted. Copies may remain in encrypted backups for up to 30 days before they are
@@ -181,6 +231,7 @@
         <li><strong>Stop sharing:</strong> Settings → What I share.</li>
         <li><strong>Delete face data:</strong> Settings → Faces and scanning.</li>
         <li><strong>Delete your account and data:</strong> Settings → You two → Delete account and data.</li>
+        <li><strong>Switch off usage statistics:</strong> Settings → Privacy → Help improve the app.</li>
         <li><strong>Remove photo access:</strong> iOS Settings → Privacy & Security → Photos.</li>
       </ul>
       <p>
