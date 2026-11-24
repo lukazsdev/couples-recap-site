@@ -1,14 +1,14 @@
 /* Couples Recap public pages. No scripts from elsewhere, no fonts from elsewhere, no tracking. */
 :root {
-  --night: #1a0e12;
-  --plum: #2a0f18;
-  --wine: #4a1626;
-  --cream: #fbf1e6;
-  --muted: #d9bfb4;
-  --faint: #9c7f78;
-  --apricot: #f2a97e;
-  --rose: #e86a6a;
-  --line: rgba(251, 241, 230, 0.14);
+  --night: #0b0b0f;
+  --plum: #17131f;
+  --wine: #2a2145;
+  --cream: #f6f3ee;
+  --muted: #b8b4c2;
+  --faint: #75717f;
+  --apricot: #c8f560;
+  --rose: #ff8fa3;
+  --line: rgba(246, 243, 238, 0.12);
 }
 * {
   box-sizing: border-box;
@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--plum), var(--night) 42%, #150a0e);
+  background: linear-gradient(180deg, var(--plum), var(--night) 42%, #08080b);
   background-attachment: fixed;
   color: var(--cream);
   font:
@@ -107,7 +107,7 @@ li {
   text-decoration: none;
   font-weight: 700;
   color: #2a1218;
-  background: linear-gradient(135deg, #e9c27d, var(--apricot) 55%, var(--rose));
+  background: linear-gradient(160deg, #7b5cff, var(--rose));
   border-radius: 999px;
   padding: 17px 24px;
   margin: 18px 0 10px;
