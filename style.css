@@ -1,14 +1,26 @@
-/* Couples Recap public pages. No scripts from elsewhere, no fonts from elsewhere, no tracking. */
+/* Moved On public pages. No scripts, no tracking, and nothing loaded from another site: the two
+   fonts are served from here (fonts/, SIL Open Font License). */
+@font-face {
+  font-family: 'Archivo SemiCondensed';
+  src: url('fonts/ArchivoSemiCondensed-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('fonts/IBMPlexMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
 :root {
-  --night: #0b0b0f;
-  --plum: #17131f;
-  --wine: #2a2145;
-  --cream: #f6f3ee;
-  --muted: #b8b4c2;
-  --faint: #75717f;
-  --apricot: #c8f560;
-  --rose: #ff8fa3;
-  --line: rgba(246, 243, 238, 0.12);
+  --ink: #0a0908;
+  --bone: #efe9dd;
+  --muted: #9c968b;
+  --faint: #6e6960;
+  --ember: #ff4124;
+  --line: rgba(239, 233, 221, 0.12);
+  --display: 'Archivo SemiCondensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 * {
   box-sizing: border-box;
@@ -19,9 +31,10 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--plum), var(--night) 42%, #08080b);
+  background:
+    radial-gradient(120% 60% at 50% -20%, rgba(255, 65, 36, 0.2), rgba(255, 65, 36, 0) 70%), var(--ink);
   background-attachment: fixed;
-  color: var(--cream);
+  color: var(--bone);
   font:
     17px/1.6 -apple-system,
     BlinkMacSystemFont,
@@ -36,28 +49,45 @@ main {
   margin: 0 auto;
   padding: 56px 22px 96px;
 }
+/* The mark: "ex", struck through. */
 .brand {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--apricot);
+  position: relative;
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--bone);
   text-decoration: none;
+}
+.brand::after {
+  content: '';
+  position: absolute;
+  left: -14%;
+  right: -14%;
+  top: 58%;
+  height: 0.15em;
+  margin-top: -0.075em;
+  border-radius: 1em;
+  background: var(--ember);
+  box-shadow: 0 0 0 0.055em var(--ink);
+  transform: rotate(-18deg);
 }
 h1,
 h2 {
-  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--display);
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 h1 {
-  font-size: clamp(34px, 7vw, 46px);
-  line-height: 1.12;
-  margin: 18px 0 10px;
+  font-size: clamp(38px, 8vw, 56px);
+  line-height: 1.02;
+  margin: 28px 0 12px;
 }
 h2 {
-  font-size: 24px;
-  line-height: 1.25;
+  font-size: 26px;
+  line-height: 1.15;
   margin: 44px 0 8px;
 }
 h3 {
@@ -69,11 +99,13 @@ li {
   color: var(--muted);
 }
 strong {
-  color: var(--cream);
+  color: var(--bone);
   font-weight: 600;
 }
 a {
-  color: var(--apricot);
+  color: var(--bone);
+  text-decoration-color: var(--ember);
+  text-underline-offset: 3px;
 }
 ul {
   padding-left: 20px;
@@ -82,66 +114,55 @@ li {
   margin: 6px 0;
 }
 .lede {
-  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
-  font-style: italic;
   font-size: 20px;
+  line-height: 1.45;
   color: var(--muted);
 }
 .updated {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--faint);
-  font-size: 14px;
 }
 .card {
   border: 1px solid var(--line);
-  background: rgba(251, 241, 230, 0.05);
-  border-radius: 20px;
+  background: rgba(239, 233, 221, 0.03);
+  border-radius: 16px;
   padding: 18px 20px;
   margin: 22px 0;
 }
 .card ul {
   margin: 0;
 }
-.button {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 700;
-  color: #2a1218;
-  background: linear-gradient(160deg, #7b5cff, var(--rose));
-  border-radius: 999px;
-  padding: 17px 24px;
-  margin: 18px 0 10px;
-}
-.code {
-  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
-  font-weight: 700;
-  font-size: 42px;
-  letter-spacing: 0.08em;
-  color: var(--apricot);
-  text-align: center;
-  margin: 6px 0;
-}
-.label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--faint);
-  text-align: center;
-}
+/* Three prints with a red line struck across them. */
 .prints {
+  position: relative;
   display: flex;
   justify-content: center;
   height: 150px;
-  margin: 34px 0 6px;
+  margin: 40px 0 6px;
+}
+.prints::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 11px;
+  margin: -6px 0 0 -150px;
+  border-radius: 11px;
+  background: var(--ember);
+  transform: rotate(-9deg);
+  z-index: 2;
 }
 .print {
   width: 96px;
   height: 124px;
-  background: var(--cream);
-  padding: 6px 6px 18px;
+  background: var(--bone);
+  padding: 5px;
   border-radius: 3px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
   margin: 0 -10px;
 }
 .print i {
@@ -154,20 +175,20 @@ li {
   transform: rotate(-9deg);
 }
 .print:nth-child(1) i {
-  background: linear-gradient(#f08a80, #b8455a);
+  background: linear-gradient(#6f665c, #2c2723);
 }
 .print:nth-child(2) {
   transform: rotate(3deg) translateY(-6px);
   z-index: 1;
 }
 .print:nth-child(2) i {
-  background: linear-gradient(#f8ce9a, #ee9463);
+  background: linear-gradient(#948a7c, #403a34);
 }
 .print:nth-child(3) {
   transform: rotate(9deg);
 }
 .print:nth-child(3) i {
-  background: linear-gradient(#b98a94, #7a4b5a);
+  background: linear-gradient(#57504a, #1f1c19);
 }
 footer {
   margin-top: 64px;
